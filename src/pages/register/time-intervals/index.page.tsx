@@ -64,7 +64,7 @@ const timeIntervalsFormSchema = z.object({
 })
 
 type TimeIntervalsFormInput = z.input<typeof timeIntervalsFormSchema>
-type TimeIntervalsFormOutput = z.output<typeof timeIntervalsFormSchema>
+// type TimeIntervalsFormOutput = z.output<typeof timeIntervalsFormSchema>
 
 export default function TimeIntervals() {
   const {
@@ -98,9 +98,7 @@ export default function TimeIntervals() {
   const intervals = watch('intervals')
   const router = useRouter()
 
-  async function handleSetTimeIntervals({
-    intervals,
-  }: TimeIntervalsFormOutput) {
+  async function handleSetTimeIntervals({ intervals }: any) {
     await api.post('users/time-intervals', { intervals })
 
     await router.push(`/register/update-profile`)
