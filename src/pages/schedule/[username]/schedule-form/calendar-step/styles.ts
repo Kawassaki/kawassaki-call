@@ -40,6 +40,7 @@ export const TimePickerHeader = styled(Text, {
 
   span: {
     color: '$gray200',
+    marginLeft: '$1',
   },
 })
 
@@ -70,7 +71,7 @@ export const TimePickerItem = styled('button', {
 
   '&:disabled': {
     backgroundColor: 'none',
-    cursor: 'none',
+    cursor: 'not-allowed',
     opacity: 0.4,
   },
 
